@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium slds-theme_alert-texture">
+            <lightning-input name="Name" label="Name your desk" onchange={changeValue}></lightning-input>
+            <lightning-checkbox-group name="Accessories" label="Checkbox Group" options={options} value={value}
+                onchange={changeValue}></lightning-checkbox-group>
+            <p>{checkboxValues}</p>
+            <lightning-button onclick={submitDesk} label="Submit" variant="brand" class="slds-m-around_medium slds-align_absolute-center"></lightning-button>
+            <lightning-datatable key-field="id" data={data_desks} columns={columns} hide-checkbox-column></lightning-datatable> 
+        </div>
+    </lightning-card>
+</template>

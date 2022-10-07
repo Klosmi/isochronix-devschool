@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <!-- <div class="slds-m-around_medium slds-theme_alert-texture">
+            <lightning-record-edit-form object-api-name={objectApiName}>
+                <lightning-messages> </lightning-messages>
+                <lightning-input-field field-name={nameField} type="date" min={today} max="2024-01-01" onchange={changeValue}>
+                </lightning-input-field>
+                <lightning-combobox name="Desk__c" label="Choose your desk" value="" options={combobox}
+                onchange={changeValue}>
+            </lightning-combobox>
+            <lightning-input name="Name" label="Reservation Name" onchange={changeValue}></lightning-input>
+            <lightning-button onclick={submitReservation} variant="brand" type="submit" label="Submit" class="slds-m-around_medium slds-align_absolute-center">
+            </lightning-button>
+        </lightning-record-edit-form>
+        </div> -->
+
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess}>
+            <lightning-messages> </lightning-messages>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Desk__c"></lightning-input-field>
+            <lightning-input-field field-name="Date__c"></lightning-input-field>
+            <div class="slds-var-m-top_medium">
+                <lightning-button variant="brand" type="submit" label="Save">
+                </lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
