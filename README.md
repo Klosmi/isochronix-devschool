@@ -27,10 +27,10 @@ L'écran de réservation doit donner la liste des tables disponibles dans les di
 * Les employés reçoivent un rappel la veille (J-1 ouvré) de leur réservation
 
 
-
+----
 
 ### Voici la liste des fichiers que j'ai utilisée pour ce projet:
-fossier: 
+**dossiers:**
 #### LWC 
 - deskList: deskList.js, deskList.html, deskList.js-meta.xml
 - reserve: reserve.js, reserve.html, reserve.js-meta.xml
