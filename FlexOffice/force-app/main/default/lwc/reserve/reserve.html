@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess}>
+            <lightning-messages> </lightning-messages>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Desk__c"></lightning-input-field>
+            <div class="slds-align_absolute-center">
+                <lightning-input-field field-name="Screen__c">
+                </lightning-input-field>
+                <lightning-input-field field-name="Keyboard_and_Mouse__c">
+                </lightning-input-field>
+            </div>
+            <lightning-input-field field-name="Date__c" min={today} max="2024-01-01"></lightning-input-field>
+            <div class="slds-var-m-top_medium">
+                <lightning-button variant="brand" type="submit" class="slds-m-around_medium slds-align_absolute-center"
+                    label="Save">
+                </lightning-button>
+            </div>
+        </lightning-record-edit-form>
+        <lightning-datatable key-field="Id" data={recData} columns={columns}>
+        </lightning-datatable>
+    </lightning-card>
+</template>

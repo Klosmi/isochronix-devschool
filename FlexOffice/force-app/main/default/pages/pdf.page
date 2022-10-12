@@ -1,0 +1,43 @@
+<apex:page controller="PdfGeneratorController" standardController="Reservation__c" renderAs="pdf" showheader="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false">
+    <html>
+        <head>
+            <apex:stylesheet value="{!URLFOR($Resource.stylesheet, 'pdf.css')}" />
+        </head>
+        <body>
+            <header>
+                <apex:panelGrid>
+                    <h1>Flex Office - reservation </h1>
+                </apex:panelGrid>
+            </header>
+            <apex:panelGrid columns="2" styleClass="tableHeader table01">
+                <apex:panelGrid columns="2">
+                    <apex:outputText>
+                        <b>Reservation's name :</b>
+                    </apex:outputText>
+                    <apex:outputText value="{!Reservation__c.Name}"></apex:outputText>
+                    <apex:outputText>
+                        <b>Desk :</b>
+                    </apex:outputText>
+                    <apex:outputText value="{!Reservation__c.Desk__r.Name}"></apex:outputText>
+                    <apex:outputText>
+                        <b>Date :</b>
+                    </apex:outputText>
+                    <apex:outputText value="{!Reservation__c.Date__c}"></apex:outputText>
+                    <apex:outputText>
+                        <b>Owner :</b>
+                    </apex:outputText>
+                    <apex:outputText value="{!Reservation__c.Owner.Name}"></apex:outputText>
+                    <apex:outputText>
+                        <b>Screen: </b>
+                    </apex:outputText>
+                    <apex:outputText value="{!IF(Reservation__c.Screen__c, 'Yes', 'No')}"></apex:outputText>
+                    <apex:outputText>
+                        <b>Keyboard with a mouse: </b>
+                    </apex:outputText>
+                    <apex:outputText value="{!IF(Reservation__c.Keyboard_and_Mouse__c, 'Yes', 'No')}"></apex:outputText>
+                </apex:panelGrid>
+            </apex:panelGrid>
+        </body>
+    </html>
+</apex:page>
+
